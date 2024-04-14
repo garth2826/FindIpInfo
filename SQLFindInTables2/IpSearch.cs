@@ -71,6 +71,9 @@ namespace SQLFindInTables2
 
             }
             MyModel.SaveChanges();
+            //MyModel.SaveChangesAsync().;    
+            //int StateStored=MyModel.SaveChanges();
+            //return StateStored;
         }
 
 

@@ -79,6 +79,27 @@ namespace winFormEF_basic
             data.password=textBoxPassword.Text;
             data.position = textBoxPositionOfDevicee.Text;
             test.AddOrUpdataData(data);
+            labelAddHint.Text = "success";
+           
+
+            if (test.FindCompanyName(textBoxCompanyName.Text) == true)
+            {
+                labelExisting.Text = "Existing";
+                
+            }
+            else
+            {
+                labelExisting.Text = "New";
+            }
+
+            if (textBoxCompanyName.Text == "")
+            {
+                buttonAddRecord.Enabled = false;
+            }
+            else
+            {
+                buttonAddRecord.Enabled = true;
+            }
         }
 
         private void textBoxCompanyName_TextChanged(object sender, EventArgs e)
@@ -86,7 +107,7 @@ namespace winFormEF_basic
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonFind_Click(object sender, EventArgs e)
         {
             IPSearch test = new IPSearch();
             if (test.FindCompanyName(textBoxCompanyName.Text) == true)
@@ -110,9 +131,16 @@ namespace winFormEF_basic
             {
                 buttonAddRecord.Enabled = true;
             }
+            labelAddHint.Text = "";
+
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
