@@ -19,20 +19,20 @@ namespace SQLFindInTables2
 
         WideWorldImportersEntities MyModel = new WideWorldImportersEntities();
 
-        public List<String>  FingInTables(string searchString )
+        public List<SearchAllTables_Result>  FingInTables(string searchString )
         {
             List<String> list = new List<String>();
             //Dictionary<String, String> Dictionary = new Dictionary<String, String>();
 
 
             var SearchAllTables = MyModel.SearchAllTables(searchString);
-            foreach (var item in SearchAllTables)
+            /*foreach (var item in SearchAllTables)
             {
 
                 //Debug.WriteLine(item.ColumnValue);
                 list.Add(item.ColumnName+":"+ item.ColumnValue);
                 //Dictionary(item.ColumnName, list);
-            }
+            }*/
 
 
 
@@ -41,7 +41,9 @@ namespace SQLFindInTables2
             //search all  column  and  store in list
             //var testValue = MyModel.GarthDeviceInfoes.Where(a => a.ID > 1);
             //var testValue = MyModel.GarthDeviceInfoes.Where(a => a.company = textBoxCompanyName.);
-            return list;
+            var stored=SearchAllTables.ToList();
+            return stored;
+            //return list;
         }
         public bool FindCompanyName(string CompanyName)
         {

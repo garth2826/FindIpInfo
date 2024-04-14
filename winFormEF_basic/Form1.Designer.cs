@@ -55,6 +55,10 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.columnNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +73,8 @@
             this.tabPageSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageAddRecord.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.garthDeviceInfo2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +114,7 @@
             // tabPageSearch
             // 
             this.tabPageSearch.AutoScroll = true;
+            this.tabPageSearch.Controls.Add(this.dataGridView2);
             this.tabPageSearch.Controls.Add(this.dataGridView1);
             this.tabPageSearch.Controls.Add(this.buttonSearch);
             this.tabPageSearch.Controls.Add(this.textBoxSearchString);
@@ -138,10 +145,10 @@
             this.passwordDataGridViewTextBoxColumn,
             this.positionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.garthDeviceInfo2BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(455, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(943, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 334);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -348,6 +355,37 @@
             this.textBoxCompanyName.TabIndex = 0;
             this.textBoxCompanyName.TextChanged += new System.EventHandler(this.textBoxCompanyName_TextChanged);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnNameDataGridViewTextBoxColumn,
+            this.columnValueDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.gridViewBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 76);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(413, 314);
+            this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // columnNameDataGridViewTextBoxColumn
+            // 
+            this.columnNameDataGridViewTextBoxColumn.DataPropertyName = "columnName";
+            this.columnNameDataGridViewTextBoxColumn.HeaderText = "columnName";
+            this.columnNameDataGridViewTextBoxColumn.Name = "columnNameDataGridViewTextBoxColumn";
+            // 
+            // columnValueDataGridViewTextBoxColumn
+            // 
+            this.columnValueDataGridViewTextBoxColumn.DataPropertyName = "columnValue";
+            this.columnValueDataGridViewTextBoxColumn.HeaderText = "columnValue";
+            this.columnValueDataGridViewTextBoxColumn.Name = "columnValueDataGridViewTextBoxColumn";
+            // 
+            // gridViewBindingSource
+            // 
+            this.gridViewBindingSource.DataSource = typeof(FindIpInfo.GridView);
+            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -423,6 +461,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageAddRecord.ResumeLayout(false);
             this.tabPageAddRecord.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.garthDeviceInfo2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -466,6 +506,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource garthDeviceInfo2BindingSource;
         private System.Windows.Forms.Label labelAddHint;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnValueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource gridViewBindingSource;
     }
 }
 

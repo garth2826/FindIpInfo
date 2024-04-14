@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SQLFindInTables2;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using FindIpInfo;
 namespace winFormEF_basic
 {
     public partial class Form1 : Form
@@ -25,7 +26,9 @@ namespace winFormEF_basic
         {
             InitializeComponent();
         }
+        GridView gridView=new GridView();
 
+        
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             
@@ -41,11 +44,12 @@ namespace winFormEF_basic
 
                 Debug.WriteLine(item);
 
+
             }
             //dataGridView1.DataSource = list;
             //Context db = new Context();
-           // var data = (from d in db.tablename select d);
-            //dataGridView1.DataSource = data.ToList();
+            // var data = (from d in db.tablename select d);
+            dataGridView2.DataSource = list;
 
 
         }
@@ -170,6 +174,11 @@ namespace winFormEF_basic
             {
                 e.Cancel = true;
             }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
