@@ -42,8 +42,10 @@ namespace winFormEF_basic
                 Debug.WriteLine(item);
 
             }
-
-
+            //dataGridView1.DataSource = list;
+            //Context db = new Context();
+           // var data = (from d in db.tablename select d);
+            //dataGridView1.DataSource = data.ToList();
 
 
         }
@@ -79,6 +81,7 @@ namespace winFormEF_basic
             data.password=textBoxPassword.Text;
             data.position = textBoxPositionOfDevicee.Text;
             test.AddOrUpdataData(data);
+            
             labelAddHint.Text = "success";
            
 
@@ -91,8 +94,8 @@ namespace winFormEF_basic
             {
                 labelExisting.Text = "New";
             }
-
-            if (textBoxCompanyName.Text == "")
+            var store1 = data.company;
+            if (store1 == textBoxCompanyName.Text)
             {
                 buttonAddRecord.Enabled = false;
             }
@@ -132,7 +135,7 @@ namespace winFormEF_basic
                 buttonAddRecord.Enabled = true;
             }
             labelAddHint.Text = "";
-
+        
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -143,6 +146,30 @@ namespace winFormEF_basic
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void labelAddHint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to close the program?", "Exit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+               
+            }
+            else 
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

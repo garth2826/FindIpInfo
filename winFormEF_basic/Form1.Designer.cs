@@ -35,6 +35,7 @@
             this.tabPageSearch = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageAddRecord = new System.Windows.Forms.TabPage();
+            this.labelAddHint = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPositionOfDevicee = new System.Windows.Forms.TextBox();
             this.labelExisting = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
-            this.labelAddHint = new System.Windows.Forms.Label();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +74,7 @@
             // 
             // buttonSearch
             // 
+            this.buttonSearch.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSearch.Location = new System.Drawing.Point(239, 40);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(111, 30);
@@ -93,12 +94,15 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPageSearch);
             this.tabControl1.Controls.Add(this.tabPageAddRecord);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 426);
+            this.tabControl1.Size = new System.Drawing.Size(963, 442);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageSearch
@@ -110,7 +114,7 @@
             this.tabPageSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageSearch.Name = "tabPageSearch";
             this.tabPageSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSearch.Size = new System.Drawing.Size(768, 400);
+            this.tabPageSearch.Size = new System.Drawing.Size(955, 416);
             this.tabPageSearch.TabIndex = 0;
             this.tabPageSearch.Text = "search";
             this.tabPageSearch.UseVisualStyleBackColor = true;
@@ -137,7 +141,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(943, 322);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -166,11 +170,21 @@
             this.tabPageAddRecord.Location = new System.Drawing.Point(4, 22);
             this.tabPageAddRecord.Name = "tabPageAddRecord";
             this.tabPageAddRecord.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddRecord.Size = new System.Drawing.Size(768, 400);
+            this.tabPageAddRecord.Size = new System.Drawing.Size(955, 416);
             this.tabPageAddRecord.TabIndex = 1;
             this.tabPageAddRecord.Text = "addRecord";
             this.tabPageAddRecord.UseVisualStyleBackColor = true;
             this.tabPageAddRecord.Click += new System.EventHandler(this.tabPageAddRecord_Click);
+            // 
+            // labelAddHint
+            // 
+            this.labelAddHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddHint.AutoSize = true;
+            this.labelAddHint.Location = new System.Drawing.Point(865, 334);
+            this.labelAddHint.Name = "labelAddHint";
+            this.labelAddHint.Size = new System.Drawing.Size(0, 12);
+            this.labelAddHint.TabIndex = 19;
+            this.labelAddHint.Click += new System.EventHandler(this.labelAddHint_Click);
             // 
             // label8
             // 
@@ -198,6 +212,7 @@
             // 
             // buttonFindCompany
             // 
+            this.buttonFindCompany.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonFindCompany.Location = new System.Drawing.Point(385, 22);
             this.buttonFindCompany.Name = "buttonFindCompany";
             this.buttonFindCompany.Size = new System.Drawing.Size(75, 22);
@@ -315,7 +330,9 @@
             // 
             // buttonAddRecord
             // 
-            this.buttonAddRecord.Location = new System.Drawing.Point(626, 352);
+            this.buttonAddRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddRecord.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAddRecord.Location = new System.Drawing.Point(813, 368);
             this.buttonAddRecord.Name = "buttonAddRecord";
             this.buttonAddRecord.Size = new System.Drawing.Size(136, 42);
             this.buttonAddRecord.TabIndex = 1;
@@ -330,15 +347,6 @@
             this.textBoxCompanyName.Size = new System.Drawing.Size(179, 22);
             this.textBoxCompanyName.TabIndex = 0;
             this.textBoxCompanyName.TextChanged += new System.EventHandler(this.textBoxCompanyName_TextChanged);
-            // 
-            // labelAddHint
-            // 
-            this.labelAddHint.AutoSize = true;
-            this.labelAddHint.Location = new System.Drawing.Point(678, 324);
-            this.labelAddHint.Name = "labelAddHint";
-            this.labelAddHint.Size = new System.Drawing.Size(23, 12);
-            this.labelAddHint.TabIndex = 19;
-            this.labelAddHint.Text = "123";
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -402,10 +410,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 443);
+            this.ClientSize = new System.Drawing.Size(980, 459);
             this.Controls.Add(this.tabControl1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageSearch.ResumeLayout(false);
             this.tabPageSearch.PerformLayout();
