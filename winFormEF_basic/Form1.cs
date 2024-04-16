@@ -39,13 +39,13 @@ namespace winFormEF_basic
 
             var list = tt.FingInTables(textBoxSearchString.Text);
 
-            foreach (var item in list)
+           /* foreach (var item in list)
             {
 
                 Debug.WriteLine(item);
 
 
-            }
+            }*/
             //dataGridView1.DataSource = list;
             //Context db = new Context();
             // var data = (from d in db.tablename select d);

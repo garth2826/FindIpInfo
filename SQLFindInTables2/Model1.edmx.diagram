@@ -5,57 +5,57 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b830012a849242fbb2a8976cc7ff3e60" Name="Diagram1">
-        <EntityTypeShape EntityType="WideWorldImportersModel.City" Width="1.5" PointX="6" PointY="53.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Country" Width="1.5" PointX="3" PointY="42.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.DeliveryMethod" Width="1.5" PointX="3" PointY="47.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.PaymentMethod" Width="1.5" PointX="3" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.City" Width="1.5" PointX="7.5" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Country" Width="1.5" PointX="3" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.DeliveryMethod" Width="1.5" PointX="3" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PaymentMethod" Width="1.5" PointX="3" PointY="46.375" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.Person" Width="1.5" PointX="0.75" PointY="48.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StateProvince" Width="1.5" PointX="5.25" PointY="48.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.SystemParameter" Width="1.5" PointX="8.25" PointY="53.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StateProvince" Width="1.5" PointX="5.25" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.SystemParameter" Width="1.5" PointX="12.75" PointY="53.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.TransactionType" Width="1.5" PointX="3" PointY="54.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.GarthTest11" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.sysdiagram" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrderLine" Width="1.5" PointX="18.75" PointY="59.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrder" Width="1.5" PointX="13.5" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.GarthTest11" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrderLine" Width="1.5" PointX="14.25" PointY="61.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrder" Width="1.5" PointX="12" PointY="46.875" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.SupplierCategory" Width="1.5" PointX="3" PointY="58" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Supplier" Width="1.5" PointX="11.25" PointY="50.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.SupplierTransaction" Width="1.5" PointX="18.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Supplier" Width="1.5" PointX="9.75" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.SupplierTransaction" Width="1.5" PointX="20.25" PointY="45.625" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.BuyingGroup" Width="1.5" PointX="3" PointY="61.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.CustomerCategory" Width="1.5" PointX="3" PointY="64.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Customer" Width="1.5" PointX="8.25" PointY="58.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.CustomerTransaction" Width="1.5" PointX="10.5" PointY="60.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.InvoiceLine" Width="1.5" PointX="21.75" PointY="62.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Invoice" Width="1.5" PointX="16.5" PointY="52.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.OrderLine" Width="1.5" PointX="18.75" PointY="64.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Order" Width="1.5" PointX="16.5" PointY="62.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.SpecialDeal" Width="1.5" PointX="21.75" PointY="67.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.ColdRoomTemperature" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Customer" Width="1.5" PointX="15.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.CustomerTransaction" Width="1.5" PointX="20.25" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.InvoiceLine" Width="1.5" PointX="23.25" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Invoice" Width="1.5" PointX="18" PointY="48.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.OrderLine" Width="1.5" PointX="23.25" PointY="64.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Order" Width="1.5" PointX="18" PointY="57.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.SpecialDeal" Width="1.5" PointX="18" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.ColdRoomTemperature" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.Color" Width="1.5" PointX="3" PointY="67.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.PackageType" Width="1.5" PointX="3" PointY="70.875" IsExpanded="true" />
         <EntityTypeShape EntityType="WideWorldImportersModel.StockGroup" Width="1.5" PointX="3" PointY="74.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemHolding" Width="1.5" PointX="21.75" PointY="51.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockItem" Width="1.5" PointX="13.5" PointY="58.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemStockGroup" Width="1.5" PointX="15.75" PointY="69.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemTransaction" Width="1.5" PointX="21.75" PointY="56.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.VehicleTemperature" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Cities_Archive" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Countries_Archive" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.DeliveryMethods_Archive" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.PaymentMethods_Archive" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.People_Archive" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StateProvinces_Archive" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.TransactionTypes_Archive" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Result" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.SupplierCategories_Archive" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Suppliers_Archive" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.BuyingGroups_Archive" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.CustomerCategories_Archive" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Customers_Archive" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.ColdRoomTemperatures_Archive" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.Colors_Archive" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.PackageTypes_Archive" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockGroups_Archive" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.StockItems_Archive" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemHolding" Width="1.5" PointX="20.25" PointY="63.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItem" Width="1.5" PointX="12" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemStockGroup" Width="1.5" PointX="14.25" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemTransaction" Width="1.5" PointX="20.25" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.VehicleTemperature" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Cities_Archive" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Countries_Archive" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.DeliveryMethods_Archive" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PaymentMethods_Archive" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.People_Archive" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StateProvinces_Archive" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.TransactionTypes_Archive" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Result" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.SupplierCategories_Archive" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Suppliers_Archive" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.BuyingGroups_Archive" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.CustomerCategories_Archive" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Customers_Archive" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.ColdRoomTemperatures_Archive" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Colors_Archive" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PackageTypes_Archive" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockGroups_Archive" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItems_Archive" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="WideWorldImportersModel.FK_Application_Cities_Application_People" ManuallyRouted="false" />
         <AssociationConnector Association="WideWorldImportersModel.FK_Application_Cities_StateProvinceID_Application_StateProvinces" ManuallyRouted="false" />
         <AssociationConnector Association="WideWorldImportersModel.FK_Application_SystemParameters_DeliveryCityID_Application_Cities" ManuallyRouted="false" />
@@ -154,7 +154,12 @@
         <AssociationConnector Association="WideWorldImportersModel.PKFK_Warehouse_StockItemHoldings_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
         <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
         <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="WideWorldImportersModel.GarthDeviceInfo2" Width="1.5" PointX="7.625" PointY="12.75" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.GarthDeviceInfo2" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.GarthCompany" Width="1.5" PointX="0.875" PointY="1.125" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.GarthDevice" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.GarthLog" Width="1.5" PointX="5.25" PointY="1.375" />
+        <AssociationConnector Association="WideWorldImportersModel.FK__GarthDevi__compa__4EA8A765" />
+        <AssociationConnector Association="WideWorldImportersModel.FK__GarthLog__device__51851410" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

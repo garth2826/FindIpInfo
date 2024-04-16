@@ -286,6 +286,26 @@ warning 6002: The table/view 'WideWorldImporters.Application.TransactionTypes_Ar
           <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
+        <EntityType Name="GarthCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GarthDevice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company_ID" Type="int" />
+          <Property Name="moudle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="serialNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ipAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="positionOfDevice" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="GarthDeviceInfo">
           <Key>
             <PropertyRef Name="ID" />
@@ -313,6 +333,16 @@ warning 6002: The table/view 'WideWorldImporters.Application.TransactionTypes_Ar
           <Property Name="username" Type="nvarchar" MaxLength="200" />
           <Property Name="password" Type="nvarchar" MaxLength="200" />
           <Property Name="position" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="GarthLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="device_ID" Type="int" />
+          <Property Name="logDate" Type="date" Nullable="false" />
+          <Property Name="DeviceLog" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="DeviceConfig" Type="nvarchar" MaxLength="2000" />
         </EntityType>
         <EntityType Name="GarthTest11">
           <Key>
@@ -1015,6 +1045,34 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
           <Property Name="IsCompressed" Type="bit" Nullable="false" />
           <Property Name="CompressedSensorData" Type="varbinary(max)" />
         </EntityType>
+        <Association Name="FK__GarthDevi__compa__4EA8A765">
+          <End Role="GarthCompany" Type="Self.GarthCompany" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GarthDevice" Type="Self.GarthDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GarthCompany">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GarthDevice">
+              <PropertyRef Name="company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GarthLog__device__51851410">
+          <End Role="GarthDevice" Type="Self.GarthDevice" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GarthLog" Type="Self.GarthLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GarthDevice">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GarthLog">
+              <PropertyRef Name="device_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Application_Cities_Application_People">
           <End Role="People" Type="Self.People" Multiplicity="1" />
           <End Role="Cities" Type="Self.Cities" Multiplicity="*" />
@@ -2265,8 +2323,11 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
           <EntitySet Name="StateProvinces" EntityType="Self.StateProvinces" Schema="Application" store:Type="Tables" />
           <EntitySet Name="SystemParameters" EntityType="Self.SystemParameters" Schema="Application" store:Type="Tables" />
           <EntitySet Name="TransactionTypes" EntityType="Self.TransactionTypes" Schema="Application" store:Type="Tables" />
+          <EntitySet Name="GarthCompany" EntityType="Self.GarthCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GarthDevice" EntityType="Self.GarthDevice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GarthDeviceInfo" EntityType="Self.GarthDeviceInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GarthDeviceInfo2" EntityType="Self.GarthDeviceInfo2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GarthLog" EntityType="Self.GarthLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GarthTest11" EntityType="Self.GarthTest11" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PurchaseOrderLines" EntityType="Self.PurchaseOrderLines" Schema="Purchasing" store:Type="Tables" />
@@ -2556,6 +2617,14 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
     [StockItems_Archive].[ValidTo] AS [ValidTo]
     FROM [Warehouse].[StockItems_Archive] AS [StockItems_Archive]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK__GarthDevi__compa__4EA8A765" Association="Self.FK__GarthDevi__compa__4EA8A765">
+            <End Role="GarthCompany" EntitySet="GarthCompany" />
+            <End Role="GarthDevice" EntitySet="GarthDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GarthLog__device__51851410" Association="Self.FK__GarthLog__device__51851410">
+            <End Role="GarthDevice" EntitySet="GarthDevice" />
+            <End Role="GarthLog" EntitySet="GarthLog" />
+          </AssociationSet>
           <AssociationSet Name="FK_Application_Cities_Application_People" Association="Self.FK_Application_Cities_Application_People">
             <End Role="People" EntitySet="People" />
             <End Role="Cities" EntitySet="Cities" />
@@ -5777,6 +5846,17 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
           <Parameter Name="SearchStr" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="GarthDeviceInfo2" EntityType="WideWorldImportersModel.GarthDeviceInfo2" />
+          <EntitySet Name="GarthCompanies" EntityType="WideWorldImportersModel.GarthCompany" />
+          <EntitySet Name="GarthDevices" EntityType="WideWorldImportersModel.GarthDevice" />
+          <EntitySet Name="GarthLogs" EntityType="WideWorldImportersModel.GarthLog" />
+          <AssociationSet Name="FK__GarthDevi__compa__4EA8A765" Association="WideWorldImportersModel.FK__GarthDevi__compa__4EA8A765">
+            <End Role="GarthCompany" EntitySet="GarthCompanies" />
+            <End Role="GarthDevice" EntitySet="GarthDevices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GarthLog__device__51851410" Association="WideWorldImportersModel.FK__GarthLog__device__51851410">
+            <End Role="GarthDevice" EntitySet="GarthDevices" />
+            <End Role="GarthLog" EntitySet="GarthLogs" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="SearchAllTables_Result">
           <Property Type="String" Name="ColumnName" Nullable="true" MaxLength="370" />
@@ -5800,6 +5880,68 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
           <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="position" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="GarthCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GarthDevices" Relationship="WideWorldImportersModel.FK__GarthDevi__compa__4EA8A765" FromRole="GarthCompany" ToRole="GarthDevice" />
+        </EntityType>
+        <EntityType Name="GarthDevice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company_ID" Type="Int32" />
+          <Property Name="moudle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="serialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ipAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="positionOfDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GarthCompany" Relationship="WideWorldImportersModel.FK__GarthDevi__compa__4EA8A765" FromRole="GarthDevice" ToRole="GarthCompany" />
+          <NavigationProperty Name="GarthLogs" Relationship="WideWorldImportersModel.FK__GarthLog__device__51851410" FromRole="GarthDevice" ToRole="GarthLog" />
+        </EntityType>
+        <EntityType Name="GarthLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="device_ID" Type="Int32" />
+          <Property Name="logDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DeviceLog" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceConfig" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GarthDevice" Relationship="WideWorldImportersModel.FK__GarthLog__device__51851410" FromRole="GarthLog" ToRole="GarthDevice" />
+        </EntityType>
+        <Association Name="FK__GarthDevi__compa__4EA8A765">
+          <End Type="WideWorldImportersModel.GarthCompany" Role="GarthCompany" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WideWorldImportersModel.GarthDevice" Role="GarthDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GarthCompany">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GarthDevice">
+              <PropertyRef Name="company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GarthLog__device__51851410">
+          <End Type="WideWorldImportersModel.GarthDevice" Role="GarthDevice" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WideWorldImportersModel.GarthLog" Role="GarthLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GarthDevice">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GarthLog">
+              <PropertyRef Name="device_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -6758,6 +6900,39 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
                 <ScalarProperty Name="module" ColumnName="module" />
                 <ScalarProperty Name="device" ColumnName="device" />
                 <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GarthCompanies">
+            <EntityTypeMapping TypeName="WideWorldImportersModel.GarthCompany">
+              <MappingFragment StoreEntitySet="GarthCompany">
+                <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GarthDevices">
+            <EntityTypeMapping TypeName="WideWorldImportersModel.GarthDevice">
+              <MappingFragment StoreEntitySet="GarthDevice">
+                <ScalarProperty Name="positionOfDevice" ColumnName="positionOfDevice" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+                <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
+                <ScalarProperty Name="moudle" ColumnName="moudle" />
+                <ScalarProperty Name="company_ID" ColumnName="company_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GarthLogs">
+            <EntityTypeMapping TypeName="WideWorldImportersModel.GarthLog">
+              <MappingFragment StoreEntitySet="GarthLog">
+                <ScalarProperty Name="DeviceConfig" ColumnName="DeviceConfig" />
+                <ScalarProperty Name="DeviceLog" ColumnName="DeviceLog" />
+                <ScalarProperty Name="logDate" ColumnName="logDate" />
+                <ScalarProperty Name="device_ID" ColumnName="device_ID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

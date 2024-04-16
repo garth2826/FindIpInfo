@@ -10,6 +10,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SQLFindInTables2.IPSearch;
 
 namespace SQLFindInTables2
 {
@@ -17,20 +18,29 @@ namespace SQLFindInTables2
     public class IPSearch
     {
 
+
         WideWorldImportersEntities MyModel = new WideWorldImportersEntities();
 
-        public List<SearchAllTables_Result>  FingInTables(string searchString )
+        public class GridView
+        {
+
+            public string columnName { get; set; }
+            public string columnValue { get; set; }
+        }
+        public List<SearchAllTables_Result> FingInTables(string searchString )
         {
             List<String> list = new List<String>();
             //Dictionary<String, String> Dictionary = new Dictionary<String, String>();
 
-
+            //GridView gridview = new GridView();
             var SearchAllTables = MyModel.SearchAllTables(searchString);
+            var gridview= SearchAllTables.ToList();
             /*foreach (var item in SearchAllTables)
             {
 
                 //Debug.WriteLine(item.ColumnValue);
-                list.Add(item.ColumnName+":"+ item.ColumnValue);
+                gridview.columnName = item.ColumnName;
+                gridview.columnValue = item.ColumnValue;
                 //Dictionary(item.ColumnName, list);
             }*/
 
@@ -41,9 +51,9 @@ namespace SQLFindInTables2
             //search all  column  and  store in list
             //var testValue = MyModel.GarthDeviceInfoes.Where(a => a.ID > 1);
             //var testValue = MyModel.GarthDeviceInfoes.Where(a => a.company = textBoxCompanyName.);
-            var stored=SearchAllTables.ToList();
-            return stored;
-            //return list;
+            //var stored=SearchAllTables.ToList();
+            //return stored;
+            return gridview;
         }
         public bool FindCompanyName(string CompanyName)
         {

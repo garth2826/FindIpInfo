@@ -80,6 +80,9 @@ namespace SQLFindInTables2
         public virtual DbSet<StockGroups_Archive> StockGroups_Archive { get; set; }
         public virtual DbSet<StockItems_Archive> StockItems_Archive { get; set; }
         public virtual DbSet<GarthDeviceInfo2> GarthDeviceInfo2 { get; set; }
+        public virtual DbSet<GarthCompany> GarthCompanies { get; set; }
+        public virtual DbSet<GarthDevice> GarthDevices { get; set; }
+        public virtual DbSet<GarthLog> GarthLogs { get; set; }
     
         [DbFunction("WideWorldImportersEntities", "Test_Function")]
         public virtual IQueryable<Test_Function_Result> Test_Function(string searchStr)

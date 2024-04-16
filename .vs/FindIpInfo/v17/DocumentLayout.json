@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\github\\FindIpInfo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|D:\\github\\FindIpInfo\\winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|solutionrelative:winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|d:\\github\\findipinfo\\sqlfindintables2\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|solutionrelative:sqlfindintables2\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|D:\\github\\FindIpInfo\\winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|solutionrelative:winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|D:\\github\\FindIpInfo\\sqlfindintables2\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|solutionrelative:sqlfindintables2\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|d:\\github\\findipinfo\\winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|solutionrelative:winformef_basic\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|d:\\github\\findipinfo\\winformef_basic\\gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|D:\\github\\FindIpInfo\\winformef_basic\\gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6F68953-8308-432F-A5EC-9427AB95CE48}|winFormEF_basic\\FindIpInfo.csproj|solutionrelative:winformef_basic\\gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|d:\\github\\findipinfo\\sqlfindintables2\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{A41B1213-5ADC-412E-B12E-71FCA3C0318A}|SQLFindInTables2\\SQLFindInTables2.csproj|solutionrelative:sqlfindintables2\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\github\\FindIpInfo\\SQLFindInTables2\\Model1.edmx",
+              "RelativeDocumentMoniker": "SQLFindInTables2\\Model1.edmx",
+              "ToolTip": "D:\\github\\FindIpInfo\\SQLFindInTables2\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "SQLFindInTables2\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-04-16T11:55:42.546Z",
+              "EditorCaption": " [Diagram1]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -36,14 +52,14 @@
               "RelativeDocumentMoniker": "winFormEF_basic\\GridView.cs",
               "ToolTip": "D:\\github\\FindIpInfo\\winFormEF_basic\\GridView.cs",
               "RelativeToolTip": "winFormEF_basic\\GridView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T12:03:26.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\github\\FindIpInfo\\winFormEF_basic\\Form1.cs",
               "RelativeDocumentMoniker": "winFormEF_basic\\Form1.cs",
@@ -55,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\github\\FindIpInfo\\winFormEF_basic\\Form1.cs",
               "RelativeDocumentMoniker": "winFormEF_basic\\Form1.cs",
               "ToolTip": "D:\\github\\FindIpInfo\\winFormEF_basic\\Form1.cs",
               "RelativeToolTip": "winFormEF_basic\\Form1.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAA7wLQAAAAAAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAUwC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T13:08:23.338Z",
               "EditorCaption": ""
@@ -74,7 +90,7 @@
               "RelativeDocumentMoniker": "SQLFindInTables2\\IpSearch.cs",
               "ToolTip": "D:\\github\\FindIpInfo\\SQLFindInTables2\\IpSearch.cs",
               "RelativeToolTip": "SQLFindInTables2\\IpSearch.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAowD8AAAAtAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAASwDcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T12:52:53.175Z",
               "EditorCaption": ""
