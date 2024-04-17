@@ -2249,6 +2249,9 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="FindMyDevice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="companyName" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="garthTest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SearchText" Type="nvarchar" Mode="In" />
         </Function>
@@ -5857,6 +5860,9 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
             <End Role="GarthDevice" EntitySet="GarthDevices" />
             <End Role="GarthLog" EntitySet="GarthLogs" />
           </AssociationSet>
+          <FunctionImport Name="FindMyDevice" ReturnType="Collection(WideWorldImportersModel.FindMyDevice_Result)">
+          <Parameter Name="companyName" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SearchAllTables_Result">
           <Property Type="String" Name="ColumnName" Nullable="true" MaxLength="370" />
@@ -5942,6 +5948,16 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="FindMyDevice_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="company_ID" Nullable="true" />
+          <Property Type="String" Name="moudle" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="serialNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ipAddress" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="username" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="password" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="positionOfDevice" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -6937,6 +6953,20 @@ warning 6002: The table/view 'WideWorldImporters.Warehouse.StockItems_Archive' d
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="FindMyDevice" FunctionName="WideWorldImportersModel.Store.FindMyDevice">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WideWorldImportersModel.FindMyDevice_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="company_ID" ColumnName="company_ID" />
+                <ScalarProperty Name="moudle" ColumnName="moudle" />
+                <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
+                <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="positionOfDevice" ColumnName="positionOfDevice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

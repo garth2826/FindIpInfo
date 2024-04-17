@@ -180,5 +180,29 @@ namespace winFormEF_basic
         {
 
         }
+
+        private void buttonFindDevice_Click(object sender, EventArgs e)
+        {
+            IPSearch tt = new IPSearch();
+
+            var list = tt.FingMyDevice(textBoxFindCompany.Text);
+
+            /* foreach (var item in list)
+             {
+
+                 Debug.WriteLine(item);
+
+
+             }*/
+            //dataGridView1.DataSource = list;
+            //Context db = new Context();
+            // var data = (from d in db.tablename select d);
+            //dataGridView3.DataSource = list;
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -168,5 +168,14 @@ namespace SQLFindInTables2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SearchAllTables4", searchStrParameter);
         }
+    
+        public virtual ObjectResult<FindMyDevice_Result> FindMyDevice(string companyName)
+        {
+            var companyNameParameter = companyName != null ?
+                new ObjectParameter("companyName", companyName) :
+                new ObjectParameter("companyName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FindMyDevice_Result>("FindMyDevice", companyNameParameter);
+        }
     }
 }

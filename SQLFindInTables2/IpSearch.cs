@@ -27,9 +27,26 @@ namespace SQLFindInTables2
             public string columnName { get; set; }
             public string columnValue { get; set; }
         }
+        public partial class FindMyDevice
+        {
+            public int ID { get; set; }
+            public string company { get; set; }
+            public string moudle { get; set; }
+            public string serialNumber { get; set; }
+            public string ipAddress { get; set; }
+            public string username { get; set; }
+            public string password { get; set; }
+            public string positionOfDevice { get; set; }
+        }
+        public List<FindMyDevice_Result> FingMyDevice(string searchCompany)
+        {
+            var SearchMyDeviceInfo = MyModel.FindMyDevice(searchCompany).ToList();
+            return SearchMyDeviceInfo;
+        }
+
         public List<SearchAllTables_Result> FingInTables(string searchString )
         {
-            List<String> list = new List<String>();
+            //List<String> list = new List<String>();
             //Dictionary<String, String> Dictionary = new Dictionary<String, String>();
 
             //GridView gridview = new GridView();

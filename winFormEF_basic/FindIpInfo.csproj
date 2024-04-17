@@ -86,6 +86,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GridView.datasource" />
     <None Include="Properties\DataSources\SQLFindInTables2.City.datasource" />
+    <None Include="Properties\DataSources\SQLFindInTables2.FindMyDevice_Result.datasource" />
+    <None Include="Properties\DataSources\SQLFindInTables2.GarthDevice.datasource" />
     <None Include="Properties\DataSources\SQLFindInTables2.GarthDeviceInfo2.datasource" />
     <None Include="Properties\DataSources\SQLFindInTables2.IPSearch+GridView.datasource" />
     <None Include="Properties\Settings.settings">
