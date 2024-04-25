@@ -1,18 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\github\\FindIpInfo\\",
+  "WorkspaceRootPath": "D:\\github\\FindIpInfo_V2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|d:\\github\\findipinfo\\findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|d:\\github\\findipinfo_v2\\findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|solutionrelative:findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54B92950-CA8B-4456-A321-CF495F55B496}|SQLFindInTables\\SQLFindInTables.csproj|D:\\github\\FindIpInfo\\sqlfindintables\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54B92950-CA8B-4456-A321-CF495F55B496}|SQLFindInTables\\SQLFindInTables.csproj|solutionrelative:sqlfindintables\\ipsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|D:\\github\\FindIpInfo_V2\\findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|solutionrelative:findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|D:\\github\\FindIpInfo\\findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECBE5C28-1F67-43EB-93F7-338B6D63CDC1}|FindIpInfo\\FindIpInfo.csproj|solutionrelative:findipinfo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,37 +27,40 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs",
+              "DocumentMoniker": "D:\\github\\FindIpInfo_V2\\FindIpInfo\\Form1.cs",
               "RelativeDocumentMoniker": "FindIpInfo\\Form1.cs",
-              "ToolTip": "D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs",
+              "ToolTip": "D:\\github\\FindIpInfo_V2\\FindIpInfo\\Form1.cs",
               "RelativeToolTip": "FindIpInfo\\Form1.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAADwv40AAAAQAAAA",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAUwLYAAABwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T08:55:43.087Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IPSearch.cs",
-              "DocumentMoniker": "D:\\github\\FindIpInfo\\SQLFindInTables\\IPSearch.cs",
-              "RelativeDocumentMoniker": "SQLFindInTables\\IPSearch.cs",
-              "ToolTip": "D:\\github\\FindIpInfo\\SQLFindInTables\\IPSearch.cs",
-              "RelativeToolTip": "SQLFindInTables\\IPSearch.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\github\\FindIpInfo_V2\\FindIpInfo\\Form1.cs",
+              "RelativeDocumentMoniker": "FindIpInfo\\Form1.cs",
+              "ToolTip": "D:\\github\\FindIpInfo_V2\\FindIpInfo\\Form1.cs [Design]",
+              "RelativeToolTip": "FindIpInfo\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T08:47:08.502Z"
+              "WhenOpened": "2024-04-19T08:46:13.951Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
+              "Title": "Form1.cs",
               "DocumentMoniker": "D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs",
-              "RelativeDocumentMoniker": "FindIpInfo\\Form1.cs",
-              "ToolTip": "D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs [Design]",
-              "RelativeToolTip": "FindIpInfo\\Form1.cs [Design]",
+              "RelativeDocumentMoniker": "..\\FindIpInfo\\FindIpInfo\\Form1.cs",
+              "ToolTip": "D:\\github\\FindIpInfo\\FindIpInfo\\Form1.cs",
+              "RelativeToolTip": "..\\FindIpInfo\\FindIpInfo\\Form1.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAiwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T08:46:13.951Z"
+              "WhenOpened": "2024-04-23T12:31:41.115Z",
+              "EditorCaption": ""
             }
           ]
         }
