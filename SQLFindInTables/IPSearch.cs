@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace SQLFindInTables
 {
@@ -76,20 +77,84 @@ namespace SQLFindInTables
             //int StateStored=MyModel.SaveChanges();
             //return StateStored;
         }
+        List<string> existingID = new List<string>();
         public string FindAllData(string columnName,string columnValue)
         {
             var columnInfo = columnName.Split('.');
-            string sql = $"select CityID  from  {columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = {columnValue} ";
+            //string sql = $"select *  from  {columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = {columnValue} ";
             /*if($"{ columnInfo[0]}.{ columnInfo[1]}"== "Customers")
             {
                 return MyModel.DatabaseCustomers;
             }*/
-            var list = MyModel.Database.SqlQuery<int>(sql);
-            foreach (var item in list)
+            //var list = MyModel.Database.SqlQuery<IEnumerable<Tuple<int, string>>>(sql);
+            //string sql2 = $"select *  from  [Application].[Cities] where [CityID] = 15000 ";
+            //string sql3 = $"select CityID,LastEditedBy  from  [Application].[Cities] where [CityID] = 15000 ";
+            
+            StringBuilder test = new System.Text.StringBuilder();
+            
+            if (columnInfo[1]=="[GarthDevice]")
             {
-              
+                string sql = $"select *  from  {columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = '{columnValue}' ";
+                var list = MyModel.Database.SqlQuery<GarthDevice>(sql);
+                foreach (var item in list)
+                {
+                    if(existingID.Exists(x => x ==$"{columnInfo[1]}:{item.ID}"))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        test.Append(item.ToMyString());
+                        existingID.Add($"{columnInfo[1]}:{item.ID}");
+                    }
+                    //test.Append(item.ToMyString());
+                }
             }
-            return "";
+            else if(columnInfo[1] == "[GarthCompany]")
+            {
+                string sql = $"select *  from  {columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = '{columnValue}' ";
+                var list = MyModel.Database.SqlQuery<GarthCompany>(sql);
+                foreach (var item in list)
+                {
+
+                    if (existingID.Exists(x => x == $"{columnInfo[1]}:{item.ID}"))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        test.Append(item.ToMyString());
+                        existingID.Add($"{columnInfo[1]}:{item.ID}");
+                    }
+                }
+            }
+            else if (columnInfo[1] == "[GarthLog]")
+            {
+                string sql = $"select *  from  {columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = ' {columnValue} ' ";
+                var list = MyModel.Database.SqlQuery<GarthLog>(sql);
+                foreach (var item in list)
+                {
+
+                    if (existingID.Exists(x => x == $"{columnInfo[1]}:{item.ID}"))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        test.Append(item.ToMyString());
+                        existingID.Add($"{columnInfo[1]}:{item.ID}");
+                    }
+                }
+            }
+            else
+            {
+                //Do nothing here!!        
+            }
+            //var list2 = MyModel.Database.SqlQuery<City>(sql2);
+            //var list3= MyModel.Database.SqlQuery<int>(sql3);
+            //var list = MyModel.Database.SqlQuery<string>(sql);
+          
+            return test.ToString();
 
         }
 

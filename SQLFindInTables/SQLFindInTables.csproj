@@ -62,6 +62,7 @@
     <Compile Include="City.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="MyGarthDevice.cs" />
     <Compile Include="IPSearch.cs" />
     <Compile Include="ColdRoomTemperature.cs">
       <DependentUpon>Model1.tt</DependentUpon>

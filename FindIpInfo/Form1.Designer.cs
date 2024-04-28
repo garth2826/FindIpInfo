@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageSearch = new System.Windows.Forms.TabPage();
+            this.richTextBoxSearchDetailedData = new System.Windows.Forms.RichTextBox();
+            this.textBoxDetailedSearchResult = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonSearch = new System.Windows.Forms.Button();
@@ -57,11 +59,15 @@
             this.buttonAddRecord = new System.Windows.Forms.Button();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
             this.tabPageFindDevice = new System.Windows.Forms.TabPage();
+            this.buttonSaveToFile = new System.Windows.Forms.Button();
             this.labelSearchState = new System.Windows.Forms.Label();
             this.textBoxFindCompany = new System.Windows.Forms.TextBox();
             this.buttonFindDevice = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.buttonSaveToFile = new System.Windows.Forms.Button();
+            this.tabPageAddDeviceInfo = new System.Windows.Forms.TabPage();
+            this.tabPageReadSearchFile = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.columnNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchAllTablesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -74,10 +80,35 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionOfDeviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.findMyDeviceResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPageAddDeviceInfo = new System.Windows.Forms.TabPage();
-            this.tabPageReadSearchFile = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -85,9 +116,10 @@
             this.tabPageAddRecord.SuspendLayout();
             this.tabPageFindDevice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPageAddDeviceInfo.SuspendLayout();
+            this.tabPageReadSearchFile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).BeginInit();
-            this.tabPageReadSearchFile.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,12 +135,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(861, 441);
+            this.tabControl1.Size = new System.Drawing.Size(1821, 812);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPageSearch
             // 
             this.tabPageSearch.AutoScroll = true;
+            this.tabPageSearch.Controls.Add(this.richTextBoxSearchDetailedData);
+            this.tabPageSearch.Controls.Add(this.textBoxDetailedSearchResult);
             this.tabPageSearch.Controls.Add(this.dataGridView2);
             this.tabPageSearch.Controls.Add(this.dataGridView1);
             this.tabPageSearch.Controls.Add(this.buttonSearch);
@@ -116,10 +150,33 @@
             this.tabPageSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageSearch.Name = "tabPageSearch";
             this.tabPageSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSearch.Size = new System.Drawing.Size(853, 415);
+            this.tabPageSearch.Size = new System.Drawing.Size(1813, 786);
             this.tabPageSearch.TabIndex = 0;
             this.tabPageSearch.Text = "search";
             this.tabPageSearch.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxSearchDetailedData
+            // 
+            this.richTextBoxSearchDetailedData.Location = new System.Drawing.Point(492, 33);
+            this.richTextBoxSearchDetailedData.Name = "richTextBoxSearchDetailedData";
+            this.richTextBoxSearchDetailedData.Size = new System.Drawing.Size(22, 22);
+            this.richTextBoxSearchDetailedData.TabIndex = 5;
+            this.richTextBoxSearchDetailedData.Text = "";
+            this.richTextBoxSearchDetailedData.Visible = false;
+            this.richTextBoxSearchDetailedData.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // textBoxDetailedSearchResult
+            // 
+            this.textBoxDetailedSearchResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDetailedSearchResult.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxDetailedSearchResult.Location = new System.Drawing.Point(6, 243);
+            this.textBoxDetailedSearchResult.Multiline = true;
+            this.textBoxDetailedSearchResult.Name = "textBoxDetailedSearchResult";
+            this.textBoxDetailedSearchResult.Size = new System.Drawing.Size(1801, 537);
+            this.textBoxDetailedSearchResult.TabIndex = 4;
+            this.textBoxDetailedSearchResult.TextChanged += new System.EventHandler(this.textBoxDetailedSearchResult_TextChanged);
             // 
             // dataGridView2
             // 
@@ -135,7 +192,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(6, 76);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(397, 316);
+            this.dataGridView2.Size = new System.Drawing.Size(1801, 161);
             this.dataGridView2.TabIndex = 3;
             // 
             // dataGridView1
@@ -144,11 +201,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(893, 377);
+            this.dataGridView1.Location = new System.Drawing.Point(382, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(26, 23);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Visible = false;
             // 
             // buttonSearch
             // 
@@ -157,7 +215,7 @@
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(111, 30);
             this.buttonSearch.TabIndex = 0;
-            this.buttonSearch.Text = "search";
+            this.buttonSearch.Text = "&search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
@@ -167,7 +225,7 @@
             this.textBoxSearchString.Name = "textBoxSearchString";
             this.textBoxSearchString.Size = new System.Drawing.Size(227, 22);
             this.textBoxSearchString.TabIndex = 1;
-            this.textBoxSearchString.Text = "15000";
+            this.textBoxSearchString.Text = "switch";
             // 
             // tabPageAddRecord
             // 
@@ -194,7 +252,7 @@
             this.tabPageAddRecord.Location = new System.Drawing.Point(4, 22);
             this.tabPageAddRecord.Name = "tabPageAddRecord";
             this.tabPageAddRecord.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddRecord.Size = new System.Drawing.Size(853, 415);
+            this.tabPageAddRecord.Size = new System.Drawing.Size(1813, 786);
             this.tabPageAddRecord.TabIndex = 1;
             this.tabPageAddRecord.Text = "addRecord";
             this.tabPageAddRecord.UseVisualStyleBackColor = true;
@@ -240,7 +298,7 @@
             this.buttonFindCompany.Name = "buttonFindCompany";
             this.buttonFindCompany.Size = new System.Drawing.Size(75, 22);
             this.buttonFindCompany.TabIndex = 15;
-            this.buttonFindCompany.Text = "find";
+            this.buttonFindCompany.Text = "&find";
             this.buttonFindCompany.UseVisualStyleBackColor = true;
             this.buttonFindCompany.Click += new System.EventHandler(this.buttonFindCompany_Click);
             // 
@@ -358,7 +416,7 @@
             this.buttonAddRecord.Name = "buttonAddRecord";
             this.buttonAddRecord.Size = new System.Drawing.Size(136, 42);
             this.buttonAddRecord.TabIndex = 1;
-            this.buttonAddRecord.Text = "add or update record";
+            this.buttonAddRecord.Text = "&add or update record";
             this.buttonAddRecord.UseVisualStyleBackColor = true;
             this.buttonAddRecord.Click += new System.EventHandler(this.buttonAddRecord_Click);
             // 
@@ -379,10 +437,20 @@
             this.tabPageFindDevice.Location = new System.Drawing.Point(4, 22);
             this.tabPageFindDevice.Name = "tabPageFindDevice";
             this.tabPageFindDevice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFindDevice.Size = new System.Drawing.Size(853, 415);
+            this.tabPageFindDevice.Size = new System.Drawing.Size(1813, 786);
             this.tabPageFindDevice.TabIndex = 2;
             this.tabPageFindDevice.Text = "findDevice";
             this.tabPageFindDevice.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveToFile
+            // 
+            this.buttonSaveToFile.Location = new System.Drawing.Point(760, 38);
+            this.buttonSaveToFile.Name = "buttonSaveToFile";
+            this.buttonSaveToFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveToFile.TabIndex = 7;
+            this.buttonSaveToFile.Text = "&Save To File";
+            this.buttonSaveToFile.UseVisualStyleBackColor = true;
+            this.buttonSaveToFile.Click += new System.EventHandler(this.buttonSaveToFile_Click);
             // 
             // labelSearchState
             // 
@@ -405,7 +473,7 @@
             this.buttonFindDevice.Name = "buttonFindDevice";
             this.buttonFindDevice.Size = new System.Drawing.Size(75, 23);
             this.buttonFindDevice.TabIndex = 4;
-            this.buttonFindDevice.Text = "find device";
+            this.buttonFindDevice.Text = "&find device";
             this.buttonFindDevice.UseVisualStyleBackColor = true;
             this.buttonFindDevice.Click += new System.EventHandler(this.buttonFindDevice_Click);
             // 
@@ -433,31 +501,92 @@
             this.dataGridView3.TabIndex = 3;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // buttonSaveToFile
+            // tabPageAddDeviceInfo
             // 
-            this.buttonSaveToFile.Location = new System.Drawing.Point(760, 38);
-            this.buttonSaveToFile.Name = "buttonSaveToFile";
-            this.buttonSaveToFile.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveToFile.TabIndex = 7;
-            this.buttonSaveToFile.Text = "Save To File";
-            this.buttonSaveToFile.UseVisualStyleBackColor = true;
-            this.buttonSaveToFile.Click += new System.EventHandler(this.buttonSaveToFile_Click);
+            this.tabPageAddDeviceInfo.Controls.Add(this.button3);
+            this.tabPageAddDeviceInfo.Controls.Add(this.button2);
+            this.tabPageAddDeviceInfo.Controls.Add(this.button1);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label22);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label21);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label20);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label19);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label18);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label17);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label16);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label15);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label14);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label13);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label12);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label11);
+            this.tabPageAddDeviceInfo.Controls.Add(this.label9);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox14);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox15);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox13);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox10);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox11);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox12);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox9);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox8);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox7);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox6);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox5);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox2);
+            this.tabPageAddDeviceInfo.Controls.Add(this.textBox1);
+            this.tabPageAddDeviceInfo.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAddDeviceInfo.Name = "tabPageAddDeviceInfo";
+            this.tabPageAddDeviceInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAddDeviceInfo.Size = new System.Drawing.Size(1813, 786);
+            this.tabPageAddDeviceInfo.TabIndex = 3;
+            this.tabPageAddDeviceInfo.Text = "addDeviceInfo";
+            this.tabPageAddDeviceInfo.UseVisualStyleBackColor = true;
+            // 
+            // tabPageReadSearchFile
+            // 
+            this.tabPageReadSearchFile.Controls.Add(this.listBox1);
+            this.tabPageReadSearchFile.Controls.Add(this.comboBox1);
+            this.tabPageReadSearchFile.Location = new System.Drawing.Point(4, 22);
+            this.tabPageReadSearchFile.Name = "tabPageReadSearchFile";
+            this.tabPageReadSearchFile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageReadSearchFile.Size = new System.Drawing.Size(1813, 786);
+            this.tabPageReadSearchFile.TabIndex = 4;
+            this.tabPageReadSearchFile.Text = "ReadSearchFile";
+            this.tabPageReadSearchFile.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(16, 67);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(831, 340);
+            this.listBox1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(15, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 0;
             // 
             // columnNameDataGridViewTextBoxColumn
             // 
+            this.columnNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.columnNameDataGridViewTextBoxColumn.DataPropertyName = "ColumnName";
-            this.columnNameDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.columnNameDataGridViewTextBoxColumn.FillWeight = 500F;
             this.columnNameDataGridViewTextBoxColumn.HeaderText = "ColumnName";
             this.columnNameDataGridViewTextBoxColumn.Name = "columnNameDataGridViewTextBoxColumn";
-            this.columnNameDataGridViewTextBoxColumn.Width = 200;
             // 
             // columnValueDataGridViewTextBoxColumn
             // 
+            this.columnValueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.columnValueDataGridViewTextBoxColumn.DataPropertyName = "ColumnValue";
-            this.columnValueDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.columnValueDataGridViewTextBoxColumn.FillWeight = 400F;
             this.columnValueDataGridViewTextBoxColumn.HeaderText = "ColumnValue";
             this.columnValueDataGridViewTextBoxColumn.Name = "columnValueDataGridViewTextBoxColumn";
-            this.columnValueDataGridViewTextBoxColumn.Width = 150;
             // 
             // searchAllTablesResultBindingSource
             // 
@@ -515,53 +644,246 @@
             // 
             this.findMyDeviceResultBindingSource.DataSource = typeof(SQLFindInTables.FindMyDevice_Result);
             // 
-            // tabPageAddDeviceInfo
+            // textBox1
             // 
-            this.tabPageAddDeviceInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAddDeviceInfo.Name = "tabPageAddDeviceInfo";
-            this.tabPageAddDeviceInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddDeviceInfo.Size = new System.Drawing.Size(853, 415);
-            this.tabPageAddDeviceInfo.TabIndex = 3;
-            this.tabPageAddDeviceInfo.Text = "addDeviceInfo";
-            this.tabPageAddDeviceInfo.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(121, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 0;
             // 
-            // tabPageReadSearchFile
+            // textBox2
             // 
-            this.tabPageReadSearchFile.Controls.Add(this.listBox1);
-            this.tabPageReadSearchFile.Controls.Add(this.comboBox1);
-            this.tabPageReadSearchFile.Location = new System.Drawing.Point(4, 22);
-            this.tabPageReadSearchFile.Name = "tabPageReadSearchFile";
-            this.tabPageReadSearchFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReadSearchFile.Size = new System.Drawing.Size(853, 415);
-            this.tabPageReadSearchFile.TabIndex = 4;
-            this.tabPageReadSearchFile.Text = "ReadSearchFile";
-            this.tabPageReadSearchFile.UseVisualStyleBackColor = true;
+            this.textBox2.Location = new System.Drawing.Point(471, 79);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 1;
             // 
-            // comboBox1
+            // textBox5
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 0;
+            this.textBox5.Location = new System.Drawing.Point(471, 521);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 4;
             // 
-            // listBox1
+            // textBox6
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(16, 67);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(831, 340);
-            this.listBox1.TabIndex = 1;
+            this.textBox6.Location = new System.Drawing.Point(471, 436);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 5;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(471, 266);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 6;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(471, 349);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 7;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(471, 171);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 8;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(822, 171);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 22);
+            this.textBox10.TabIndex = 11;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(822, 266);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 22);
+            this.textBox11.TabIndex = 10;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(822, 79);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 22);
+            this.textBox12.TabIndex = 9;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(822, 349);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 22);
+            this.textBox13.TabIndex = 12;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(471, 612);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
+            this.textBox14.TabIndex = 14;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(471, 697);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 22);
+            this.textBox15.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(121, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 12);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "label9";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(469, 50);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 12);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(469, 140);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 12);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "label12";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(469, 230);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 12);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "label13";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(469, 317);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 12);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "label14";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(469, 399);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 12);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "label15";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(469, 484);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(39, 12);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "label16";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(469, 574);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 12);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "label17";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(469, 660);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 12);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "label18";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(820, 50);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 12);
+            this.label19.TabIndex = 25;
+            this.label19.Text = "label19";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(820, 140);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 12);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "label20";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(820, 230);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 12);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "label21";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(820, 317);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(39, 12);
+            this.label22.TabIndex = 28;
+            this.label22.Text = "label22";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(270, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(625, 77);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(971, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 465);
+            this.ClientSize = new System.Drawing.Size(1845, 836);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -576,9 +898,11 @@
             this.tabPageFindDevice.ResumeLayout(false);
             this.tabPageFindDevice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPageAddDeviceInfo.ResumeLayout(false);
+            this.tabPageAddDeviceInfo.PerformLayout();
+            this.tabPageReadSearchFile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).EndInit();
-            this.tabPageReadSearchFile.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -626,14 +950,45 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn positionOfDeviceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource findMyDeviceResultBindingSource;
         private System.Windows.Forms.BindingSource searchAllTablesResultBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnValueDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label labelSearchState;
         private System.Windows.Forms.Button buttonSaveToFile;
         private System.Windows.Forms.TabPage tabPageAddDeviceInfo;
         private System.Windows.Forms.TabPage tabPageReadSearchFile;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBoxDetailedSearchResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnValueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.RichTextBox richTextBoxSearchDetailedData;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

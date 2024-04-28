@@ -1,0 +1,14 @@
+ID:3 , company_ID:1 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:6 , company_ID:2 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:8 , company_ID:3 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:3 , company_ID:1 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:6 , company_ID:2 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:8 , company_ID:3 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:3 , company_ID:1 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:6 , company_ID:2 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:8 , company_ID:3 , module:AP , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:9 , company_ID:1 , module:cisco 9115AX ,AP , serialNumber:N/A , ipAddress:192.168.40.233 , username:N/A , password:N/A , positionOfDevice:M7 2F
+ID:14 , company_ID:1 , module:cisco 9115AX ,AP , serialNumber:N/A , ipAddress:192.168.150.60 , username:N/A , password:N/A , positionOfDevice:KS 2F
+ID:12 , company_ID:1 , module:cisco 1832 ,AP , serialNumber:N/A , ipAddress:192.168.30.195 , username:N/A , password:N/A , positionOfDevice:KS 1F
+ID:9 , company_ID:1 , module:cisco 9115AX ,AP , serialNumber:N/A , ipAddress:192.168.40.233 , username:N/A , password:N/A , positionOfDevice:M7 2F
+ID:14 , company_ID:1 , module:cisco 9115AX ,AP , serialNumber:N/A , ipAddress:192.168.150.60 , username:N/A , password:N/A , positionOfDevice:KS 2F

@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SQLFindInTables;
+using static System.Net.Mime.MediaTypeNames;
 namespace FindIpInfo
 {
     public partial class Form1 : Form
@@ -45,17 +46,23 @@ namespace FindIpInfo
             //Context db = new Context();
             // var data = (from d in db.tablename select d);
             dataGridView2.DataSource = list;
-            
+            StringBuilder searchedDevice = new System.Text.StringBuilder();
             //go through list to retrieve  more detailed information
             foreach (var item in list)
             {
-                var columnInfo = item.ColumnName.Split('.');
+                //var columnInfo = item.ColumnName.Split('.');
                 //FormattableString message = $"The speed of light is {speedOfLight:N3} km/s.";
-                tt.FindAllData(item.ColumnName, item.ColumnValue);
-                string sql = $"select * from  { columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = {item.ColumnValue} ";
                 
+                searchedDevice.Append(tt.FindAllData(item.ColumnName, item.ColumnValue));
+                //string sql = $"select * from  { columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = {item.ColumnValue} ";
+
 
             }
+            string fileName = @".\\searchedDevice\\" + DateTime.Now.ToString("yyyyMMdd-HHmm", new System.Globalization.CultureInfo("en-US")) + ".txt";
+            File.WriteAllText(fileName, searchedDevice.ToString());
+            textBoxDetailedSearchResult.Text = searchedDevice.ToString();
+            //richTextBoxSearchDetailedData.Text = searchedDevice.ToString();
+            //Process.Start(@".\\searchedDevice\\");
         }
 
         private void buttonAddRecord_Click(object sender, EventArgs e)
@@ -135,7 +142,7 @@ namespace FindIpInfo
             DialogResult dialog = MessageBox.Show("Do you want to close the program?", "Exit", MessageBoxButtons.YesNo);
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
 
             }
             else
@@ -195,6 +202,16 @@ namespace FindIpInfo
             //File.WriteAllText(".\\deviceInfo\\" + DateTime.Now.ToString("dd/MM/yyyy", new System.Globalization.CultureInfo("en-US")) + ".txt", deviceInfo);
             //File.WriteAllText(".\\deviceInfo\\1.txt", deviceInfo);
 
+
+        }
+
+        private void textBoxDetailedSearchResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

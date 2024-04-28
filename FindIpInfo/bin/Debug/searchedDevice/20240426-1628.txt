@@ -1,0 +1,13 @@
+ID:1 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:4 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:5 , company_ID:2 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:1 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:4 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:5 , company_ID:2 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:1 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:4 , company_ID:1 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:5 , company_ID:2 , module:switch , serialNumber: , ipAddress: , username: , password: , positionOfDevice:
+ID:15 , company_ID:2 , module:ALi switch , serialNumber:N/A , ipAddress:172.16.254.1 , username:admin , password:spil , positionOfDevice:N/A
+ID:17 , company_ID:2 , module:ALi switch , serialNumber:N/A , ipAddress:172.16.254.2 , username:admin , password:spil , positionOfDevice:N/A
+ID:15 , company_ID:2 , module:ALi switch , serialNumber:N/A , ipAddress:172.16.254.1 , username:admin , password:spil , positionOfDevice:N/A
+ID:17 , company_ID:2 , module:ALi switch , serialNumber:N/A , ipAddress:172.16.254.2 , username:admin , password:spil , positionOfDevice:N/A
