@@ -214,5 +214,51 @@ namespace FindIpInfo
         {
 
         }
+
+        private void buttonAddCompany_Click(object sender, EventArgs e)
+        {
+            if (textBoxCompany.Text == "")
+            {
+                buttonAddRecord.Enabled = false;
+            }
+            else
+            {
+                buttonAddRecord.Enabled = true;
+            }
+            IPSearch test = new IPSearch();
+            GarthCompany data = new GarthCompany();
+            data.company = textBoxCompany.Text;
+            
+            test.AddCompany(data);
+
+        }
+
+        private void buttonAddDevice_Click(object sender, EventArgs e)
+        {
+            if (textBoxDeviceModule.Text == "")
+            {
+                buttonAddRecord.Enabled = false;
+            }
+            else
+            {
+                buttonAddRecord.Enabled = true;
+            }
+            IPSearch test = new IPSearch();
+            GarthDevice data = new GarthDevice();
+            data.company_ID=comboBoxCompanyName.Text;
+            data.moudle = textBoxDeviceModule.Text;
+            data.ipAddress = textBoxDeviceIpAddress.Text;
+            data.serialNumber = textBoxDeviceSerialNumber.Text;
+            data.username = textBoxDeviceUsername.Text;
+            data.password = textBoxDevicePassword.Text;
+            data.positionOfDevice = textBoxDevicePositionOfDevice.Text;
+         
+            test.AddDevice(data);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxCompanyName.DataSource = comboBoxCompanyName.Items;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,31 @@ namespace SQLFindInTables
             }
             //garth  another way to bool
             //return testValue > 0;
+        }
+        public void AddCompany(GarthCompany data)
+        {
+            
+            MyModel.GarthCompanies.Add(data);
+
+            MyModel.SaveChanges();
+            //MyModel.SaveChangesAsync().;    
+            //int StateStored=MyModel.SaveChanges();
+            //return StateStored;
+        }
+        public void AddDevice(GarthDevice data)
+        {
+
+            MyModel.GarthDevices.Add(data);
+
+            MyModel.SaveChanges();
+            //MyModel.SaveChangesAsync().;    
+            //int StateStored=MyModel.SaveChanges();
+            //return StateStored;
+        }
+        //combobox companyname data source
+        public string ComboBoxCompany(string )
+        {
+            
         }
         public void AddOrUpdataData(GarthDeviceInfo2 data)
         {
