@@ -34,6 +34,9 @@
             this.richTextBoxSearchDetailedData = new System.Windows.Forms.RichTextBox();
             this.textBoxDetailedSearchResult = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.columnNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchAllTablesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearchString = new System.Windows.Forms.TextBox();
@@ -64,7 +67,19 @@
             this.textBoxFindCompany = new System.Windows.Forms.TextBox();
             this.buttonFindDevice = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serialNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionOfDeviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.findMyDeviceResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageAddDeviceInfo = new System.Windows.Forms.TabPage();
+            this.labelAddLogStatus = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxChooseCompany = new System.Windows.Forms.ComboBox();
+            this.buttonShowOrHidePassword = new System.Windows.Forms.Button();
             this.labelDeviceStatus = new System.Windows.Forms.Label();
             this.comboBoxDevice = new System.Windows.Forms.ComboBox();
             this.comboBoxCompanyName = new System.Windows.Forms.ComboBox();
@@ -96,32 +111,17 @@
             this.tabPageReadSearchFile = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonShowOrHidePassword = new System.Windows.Forms.Button();
-            this.comboBoxChooseCompany = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.columnNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchAllTablesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serialNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionOfDeviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.findMyDeviceResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelAddLogStatus = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageAddRecord.SuspendLayout();
             this.tabPageFindDevice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).BeginInit();
             this.tabPageAddDeviceInfo.SuspendLayout();
             this.tabPageReadSearchFile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -196,6 +196,26 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1801, 161);
             this.dataGridView2.TabIndex = 3;
+            // 
+            // columnNameDataGridViewTextBoxColumn
+            // 
+            this.columnNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnNameDataGridViewTextBoxColumn.DataPropertyName = "ColumnName";
+            this.columnNameDataGridViewTextBoxColumn.FillWeight = 500F;
+            this.columnNameDataGridViewTextBoxColumn.HeaderText = "ColumnName";
+            this.columnNameDataGridViewTextBoxColumn.Name = "columnNameDataGridViewTextBoxColumn";
+            // 
+            // columnValueDataGridViewTextBoxColumn
+            // 
+            this.columnValueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnValueDataGridViewTextBoxColumn.DataPropertyName = "ColumnValue";
+            this.columnValueDataGridViewTextBoxColumn.FillWeight = 400F;
+            this.columnValueDataGridViewTextBoxColumn.HeaderText = "ColumnValue";
+            this.columnValueDataGridViewTextBoxColumn.Name = "columnValueDataGridViewTextBoxColumn";
+            // 
+            // searchAllTablesResultBindingSource
+            // 
+            this.searchAllTablesResultBindingSource.DataSource = typeof(SQLFindInTables.SearchAllTables_Result);
             // 
             // dataGridView1
             // 
@@ -502,6 +522,52 @@
             this.dataGridView3.TabIndex = 3;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "company";
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            // 
+            // serialNumberDataGridViewTextBoxColumn
+            // 
+            this.serialNumberDataGridViewTextBoxColumn.DataPropertyName = "serialNumber";
+            this.serialNumberDataGridViewTextBoxColumn.HeaderText = "serialNumber";
+            this.serialNumberDataGridViewTextBoxColumn.Name = "serialNumberDataGridViewTextBoxColumn";
+            // 
+            // ipAddressDataGridViewTextBoxColumn
+            // 
+            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // positionOfDeviceDataGridViewTextBoxColumn
+            // 
+            this.positionOfDeviceDataGridViewTextBoxColumn.DataPropertyName = "positionOfDevice";
+            this.positionOfDeviceDataGridViewTextBoxColumn.HeaderText = "positionOfDevice";
+            this.positionOfDeviceDataGridViewTextBoxColumn.Name = "positionOfDeviceDataGridViewTextBoxColumn";
+            // 
+            // findMyDeviceResultBindingSource
+            // 
+            this.findMyDeviceResultBindingSource.DataSource = typeof(SQLFindInTables.FindMyDevice_Result);
+            // 
             // tabPageAddDeviceInfo
             // 
             this.tabPageAddDeviceInfo.Controls.Add(this.labelAddLogStatus);
@@ -544,6 +610,42 @@
             this.tabPageAddDeviceInfo.Text = "addDeviceInfo";
             this.tabPageAddDeviceInfo.UseVisualStyleBackColor = true;
             this.tabPageAddDeviceInfo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPageAddDeviceInfo_MouseClick);
+            // 
+            // labelAddLogStatus
+            // 
+            this.labelAddLogStatus.AutoSize = true;
+            this.labelAddLogStatus.Location = new System.Drawing.Point(1083, 120);
+            this.labelAddLogStatus.Name = "labelAddLogStatus";
+            this.labelAddLogStatus.Size = new System.Drawing.Size(0, 12);
+            this.labelAddLogStatus.TabIndex = 38;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(819, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 12);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "company ";
+            // 
+            // comboBoxChooseCompany
+            // 
+            this.comboBoxChooseCompany.FormattingEnabled = true;
+            this.comboBoxChooseCompany.Location = new System.Drawing.Point(821, 80);
+            this.comboBoxChooseCompany.Name = "comboBoxChooseCompany";
+            this.comboBoxChooseCompany.Size = new System.Drawing.Size(165, 20);
+            this.comboBoxChooseCompany.TabIndex = 36;
+            this.comboBoxChooseCompany.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseCompany_SelectedIndexChanged);
+            // 
+            // buttonShowOrHidePassword
+            // 
+            this.buttonShowOrHidePassword.Location = new System.Drawing.Point(603, 519);
+            this.buttonShowOrHidePassword.Name = "buttonShowOrHidePassword";
+            this.buttonShowOrHidePassword.Size = new System.Drawing.Size(95, 24);
+            this.buttonShowOrHidePassword.TabIndex = 35;
+            this.buttonShowOrHidePassword.Text = "show/hide";
+            this.buttonShowOrHidePassword.UseVisualStyleBackColor = true;
+            this.buttonShowOrHidePassword.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelDeviceStatus
             // 
@@ -604,7 +706,7 @@
             // labelDeviceConfig
             // 
             this.labelDeviceConfig.AutoSize = true;
-            this.labelDeviceConfig.Location = new System.Drawing.Point(819, 317);
+            this.labelDeviceConfig.Location = new System.Drawing.Point(819, 572);
             this.labelDeviceConfig.Name = "labelDeviceConfig";
             this.labelDeviceConfig.Size = new System.Drawing.Size(68, 12);
             this.labelDeviceConfig.TabIndex = 28;
@@ -622,7 +724,7 @@
             // logDate
             // 
             this.logDate.AutoSize = true;
-            this.logDate.Location = new System.Drawing.Point(996, 235);
+            this.logDate.Location = new System.Drawing.Point(23, 194);
             this.logDate.Name = "logDate";
             this.logDate.Size = new System.Drawing.Size(42, 12);
             this.logDate.TabIndex = 26;
@@ -721,14 +823,15 @@
             // 
             // textBoxDeviceConfig
             // 
-            this.textBoxDeviceConfig.Location = new System.Drawing.Point(821, 349);
+            this.textBoxDeviceConfig.Location = new System.Drawing.Point(821, 604);
+            this.textBoxDeviceConfig.Multiline = true;
             this.textBoxDeviceConfig.Name = "textBoxDeviceConfig";
-            this.textBoxDeviceConfig.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDeviceConfig.Size = new System.Drawing.Size(715, 150);
             this.textBoxDeviceConfig.TabIndex = 12;
             // 
             // textBoxLogDate
             // 
-            this.textBoxLogDate.Location = new System.Drawing.Point(998, 266);
+            this.textBoxLogDate.Location = new System.Drawing.Point(25, 225);
             this.textBoxLogDate.Name = "textBoxLogDate";
             this.textBoxLogDate.ReadOnly = true;
             this.textBoxLogDate.Size = new System.Drawing.Size(100, 22);
@@ -738,8 +841,9 @@
             // textBoxDeviceLog
             // 
             this.textBoxDeviceLog.Location = new System.Drawing.Point(821, 266);
+            this.textBoxDeviceLog.Multiline = true;
             this.textBoxDeviceLog.Name = "textBoxDeviceLog";
-            this.textBoxDeviceLog.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDeviceLog.Size = new System.Drawing.Size(715, 288);
             this.textBoxDeviceLog.TabIndex = 10;
             // 
             // textBoxDeviceModule
@@ -817,108 +921,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 0;
             // 
-            // buttonShowOrHidePassword
-            // 
-            this.buttonShowOrHidePassword.Location = new System.Drawing.Point(603, 519);
-            this.buttonShowOrHidePassword.Name = "buttonShowOrHidePassword";
-            this.buttonShowOrHidePassword.Size = new System.Drawing.Size(95, 24);
-            this.buttonShowOrHidePassword.TabIndex = 35;
-            this.buttonShowOrHidePassword.Text = "show/hide";
-            this.buttonShowOrHidePassword.UseVisualStyleBackColor = true;
-            this.buttonShowOrHidePassword.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBoxChooseCompany
-            // 
-            this.comboBoxChooseCompany.FormattingEnabled = true;
-            this.comboBoxChooseCompany.Location = new System.Drawing.Point(821, 80);
-            this.comboBoxChooseCompany.Name = "comboBoxChooseCompany";
-            this.comboBoxChooseCompany.Size = new System.Drawing.Size(165, 20);
-            this.comboBoxChooseCompany.TabIndex = 36;
-            this.comboBoxChooseCompany.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseCompany_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(819, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 12);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "company ";
-            // 
-            // columnNameDataGridViewTextBoxColumn
-            // 
-            this.columnNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnNameDataGridViewTextBoxColumn.DataPropertyName = "ColumnName";
-            this.columnNameDataGridViewTextBoxColumn.FillWeight = 500F;
-            this.columnNameDataGridViewTextBoxColumn.HeaderText = "ColumnName";
-            this.columnNameDataGridViewTextBoxColumn.Name = "columnNameDataGridViewTextBoxColumn";
-            // 
-            // columnValueDataGridViewTextBoxColumn
-            // 
-            this.columnValueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnValueDataGridViewTextBoxColumn.DataPropertyName = "ColumnValue";
-            this.columnValueDataGridViewTextBoxColumn.FillWeight = 400F;
-            this.columnValueDataGridViewTextBoxColumn.HeaderText = "ColumnValue";
-            this.columnValueDataGridViewTextBoxColumn.Name = "columnValueDataGridViewTextBoxColumn";
-            // 
-            // searchAllTablesResultBindingSource
-            // 
-            this.searchAllTablesResultBindingSource.DataSource = typeof(SQLFindInTables.SearchAllTables_Result);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "company";
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            // 
-            // serialNumberDataGridViewTextBoxColumn
-            // 
-            this.serialNumberDataGridViewTextBoxColumn.DataPropertyName = "serialNumber";
-            this.serialNumberDataGridViewTextBoxColumn.HeaderText = "serialNumber";
-            this.serialNumberDataGridViewTextBoxColumn.Name = "serialNumberDataGridViewTextBoxColumn";
-            // 
-            // ipAddressDataGridViewTextBoxColumn
-            // 
-            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // positionOfDeviceDataGridViewTextBoxColumn
-            // 
-            this.positionOfDeviceDataGridViewTextBoxColumn.DataPropertyName = "positionOfDevice";
-            this.positionOfDeviceDataGridViewTextBoxColumn.HeaderText = "positionOfDevice";
-            this.positionOfDeviceDataGridViewTextBoxColumn.Name = "positionOfDeviceDataGridViewTextBoxColumn";
-            // 
-            // findMyDeviceResultBindingSource
-            // 
-            this.findMyDeviceResultBindingSource.DataSource = typeof(SQLFindInTables.FindMyDevice_Result);
-            // 
-            // labelAddLogStatus
-            // 
-            this.labelAddLogStatus.AutoSize = true;
-            this.labelAddLogStatus.Location = new System.Drawing.Point(1083, 120);
-            this.labelAddLogStatus.Name = "labelAddLogStatus";
-            this.labelAddLogStatus.Size = new System.Drawing.Size(0, 12);
-            this.labelAddLogStatus.TabIndex = 38;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -932,17 +934,17 @@
             this.tabPageSearch.ResumeLayout(false);
             this.tabPageSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageAddRecord.ResumeLayout(false);
             this.tabPageAddRecord.PerformLayout();
             this.tabPageFindDevice.ResumeLayout(false);
             this.tabPageFindDevice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).EndInit();
             this.tabPageAddDeviceInfo.ResumeLayout(false);
             this.tabPageAddDeviceInfo.PerformLayout();
             this.tabPageReadSearchFile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchAllTablesResultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findMyDeviceResultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
