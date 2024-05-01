@@ -299,7 +299,7 @@ warning 6002: The table/view 'WideWorldImporters.Application.TransactionTypes_Ar
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="company_ID" Type="int" />
-          <Property Name="moudle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="module" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="serialNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="ipAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="username" Type="nvarchar" MaxLength="50" />
@@ -3566,7 +3566,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="company_ID" Type="Int32" />
-          <Property Name="moudle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="serialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ipAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -5828,7 +5828,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WideWorldImportersEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WideWorldImportersEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cities" EntityType="Self.City" />
           <EntitySet Name="Countries" EntityType="Self.Country" />
           <EntitySet Name="DeliveryMethods" EntityType="Self.DeliveryMethod" />
@@ -6502,7 +6502,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
         <ComplexType Name="FindMyDevice_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="company" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="moudle" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="module" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="serialNumber" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="ipAddress" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="username" Nullable="true" MaxLength="50" />
@@ -6672,7 +6672,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WideWorldImportersModelStoreContainer" CdmEntityContainer="WideWorldImportersEntities">
+        <EntityContainerMapping StorageEntityContainer="WideWorldImportersModelStoreContainer" CdmEntityContainer="WideWorldImportersEntities4">
           <EntitySetMapping Name="Cities">
             <EntityTypeMapping TypeName="WideWorldImportersModel.City">
               <MappingFragment StoreEntitySet="Cities">
@@ -6815,7 +6815,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
               <MappingFragment StoreEntitySet="GarthDevice">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="company_ID" ColumnName="company_ID" />
-                <ScalarProperty Name="moudle" ColumnName="moudle" />
+                <ScalarProperty Name="module" ColumnName="module" />
                 <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
                 <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
                 <ScalarProperty Name="username" ColumnName="username" />
@@ -7730,7 +7730,7 @@ warning 6002: The table/view 'WideWorldImporters.Website.VehicleTemperatures' do
               <ComplexTypeMapping TypeName="WideWorldImportersModel.FindMyDevice_Result">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="company" ColumnName="company" />
-                <ScalarProperty Name="moudle" ColumnName="moudle" />
+                <ScalarProperty Name="module" ColumnName="module" />
                 <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
                 <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
                 <ScalarProperty Name="username" ColumnName="username" />

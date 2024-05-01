@@ -294,7 +294,7 @@ warning 6002: The table/view 'WideWorldImporters.Application.TransactionTypes_Ar
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="company_ID" Type="int" />
-    <Property Name="moudle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="module" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="serialNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="ipAddress" Type="nvarchar" MaxLength="50" />
     <Property Name="username" Type="nvarchar" MaxLength="50" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="WideWorldImportersModelStoreContainer" CdmEntityContainer="WideWorldImportersEntities">
+  <EntityContainerMapping StorageEntityContainer="WideWorldImportersModelStoreContainer" CdmEntityContainer="WideWorldImportersEntities4">
     <EntitySetMapping Name="Cities">
       <EntityTypeMapping TypeName="WideWorldImportersModel.City">
         <MappingFragment StoreEntitySet="Cities">
@@ -143,7 +143,7 @@
         <MappingFragment StoreEntitySet="GarthDevice">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="company_ID" ColumnName="company_ID" />
-          <ScalarProperty Name="moudle" ColumnName="moudle" />
+          <ScalarProperty Name="module" ColumnName="module" />
           <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
           <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
           <ScalarProperty Name="username" ColumnName="username" />
@@ -1058,7 +1058,7 @@
         <ComplexTypeMapping TypeName="WideWorldImportersModel.FindMyDevice_Result">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="company" ColumnName="company" />
-          <ScalarProperty Name="moudle" ColumnName="moudle" />
+          <ScalarProperty Name="module" ColumnName="module" />
           <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
           <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
           <ScalarProperty Name="username" ColumnName="username" />

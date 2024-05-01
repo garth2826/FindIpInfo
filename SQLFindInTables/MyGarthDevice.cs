@@ -12,7 +12,7 @@ namespace SQLFindInTables
         public string ToMyString()
         {
             
-            string data = $"ID:{ID} , company_ID:{company_ID} , module:{moudle} , serialNumber:{serialNumber} , ipAddress:{ipAddress} , username:{username} , password:{password} , positionOfDevice:{positionOfDevice}\r\n";
+            string data = $"ID:{ID} , company_ID:{company_ID} , module:{module} , serialNumber:{serialNumber} , ipAddress:{ipAddress} , username:{username} , password:{password} , positionOfDevice:{positionOfDevice}\r\n";
             return data ;
         }
 

@@ -15,10 +15,10 @@ namespace SQLFindInTables
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class WideWorldImportersEntities : DbContext
+    public partial class WideWorldImportersEntities4 : DbContext
     {
-        public WideWorldImportersEntities()
-            : base("name=WideWorldImportersEntities")
+        public WideWorldImportersEntities4()
+            : base("name=WideWorldImportersEntities4")
         {
         }
     
@@ -87,54 +87,54 @@ namespace SQLFindInTables
         public virtual DbSet<Suppliers1> Suppliers1 { get; set; }
         public virtual DbSet<VehicleTemperatures1> VehicleTemperatures1 { get; set; }
     
-        [DbFunction("WideWorldImportersEntities", "DetermineCustomerAccess")]
+        [DbFunction("WideWorldImportersEntities4", "DetermineCustomerAccess")]
         public virtual IQueryable<DetermineCustomerAccess_Result> DetermineCustomerAccess(Nullable<int> cityID)
         {
             var cityIDParameter = cityID.HasValue ?
                 new ObjectParameter("CityID", cityID) :
                 new ObjectParameter("CityID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<DetermineCustomerAccess_Result>("[WideWorldImportersEntities].[DetermineCustomerAccess](@CityID)", cityIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<DetermineCustomerAccess_Result>("[WideWorldImportersEntities4].[DetermineCustomerAccess](@CityID)", cityIDParameter);
         }
     
-        [DbFunction("WideWorldImportersEntities", "Test_Function")]
+        [DbFunction("WideWorldImportersEntities4", "Test_Function")]
         public virtual IQueryable<Test_Function_Result> Test_Function(string searchStr)
         {
             var searchStrParameter = searchStr != null ?
                 new ObjectParameter("SearchStr", searchStr) :
                 new ObjectParameter("SearchStr", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Test_Function_Result>("[WideWorldImportersEntities].[Test_Function](@SearchStr)", searchStrParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Test_Function_Result>("[WideWorldImportersEntities4].[Test_Function](@SearchStr)", searchStrParameter);
         }
     
-        [DbFunction("WideWorldImportersEntities", "Test_Function2")]
+        [DbFunction("WideWorldImportersEntities4", "Test_Function2")]
         public virtual IQueryable<Test_Function2_Result> Test_Function2(string searchStr)
         {
             var searchStrParameter = searchStr != null ?
                 new ObjectParameter("SearchStr", searchStr) :
                 new ObjectParameter("SearchStr", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Test_Function2_Result>("[WideWorldImportersEntities].[Test_Function2](@SearchStr)", searchStrParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Test_Function2_Result>("[WideWorldImportersEntities4].[Test_Function2](@SearchStr)", searchStrParameter);
         }
     
-        [DbFunction("WideWorldImportersEntities", "test5")]
+        [DbFunction("WideWorldImportersEntities4", "test5")]
         public virtual IQueryable<test5_Result> test5(Nullable<int> searchStr)
         {
             var searchStrParameter = searchStr.HasValue ?
                 new ObjectParameter("SearchStr", searchStr) :
                 new ObjectParameter("SearchStr", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<test5_Result>("[WideWorldImportersEntities].[test5](@SearchStr)", searchStrParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<test5_Result>("[WideWorldImportersEntities4].[test5](@SearchStr)", searchStrParameter);
         }
     
-        [DbFunction("WideWorldImportersEntities", "test6")]
+        [DbFunction("WideWorldImportersEntities4", "test6")]
         public virtual IQueryable<test6_Result> test6(Nullable<int> searchStr)
         {
             var searchStrParameter = searchStr.HasValue ?
                 new ObjectParameter("SearchStr", searchStr) :
                 new ObjectParameter("SearchStr", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<test6_Result>("[WideWorldImportersEntities].[test6](@SearchStr)", searchStrParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<test6_Result>("[WideWorldImportersEntities4].[test6](@SearchStr)", searchStrParameter);
         }
     
         public virtual int AddRoleMemberIfNonexistent(string roleName, string userName)

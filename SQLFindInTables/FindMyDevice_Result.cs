@@ -15,7 +15,7 @@ namespace SQLFindInTables
     {
         public int ID { get; set; }
         public string company { get; set; }
-        public string moudle { get; set; }
+        public string module { get; set; }
         public string serialNumber { get; set; }
         public string ipAddress { get; set; }
         public string username { get; set; }

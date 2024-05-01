@@ -16,13 +16,18 @@ namespace FindIpInfo
 {
     public partial class Form1 : Form
     {
+        IPSearch test = new IPSearch();
+        public List<FindMyDevice_Result> deviceInfo
+        { get; set; }
         public Form1()
         {
             InitializeComponent();
+            comboBoxCompanyName.DataSource = test.ComboBoxCompany();
+            comboBoxChooseCompany.DataSource = test.ComboBoxCompany();
+            comboBoxDevice.DataSource = test.ComboBoxDevice(comboBoxChooseCompany.Text);
         }
-        public List<FindMyDevice_Result> deviceInfo
-        { get; set; }
 
+       
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -31,9 +36,8 @@ namespace FindIpInfo
         private void buttonSearch_Click(object sender, EventArgs e)
         {
 
-            IPSearch tt = new IPSearch();
 
-            var list = tt.FingInTables(textBoxSearchString.Text);
+            var list = test.FingInTables(textBoxSearchString.Text);
 
             /* foreach (var item in list)
              {
@@ -53,7 +57,7 @@ namespace FindIpInfo
                 //var columnInfo = item.ColumnName.Split('.');
                 //FormattableString message = $"The speed of light is {speedOfLight:N3} km/s.";
                 
-                searchedDevice.Append(tt.FindAllData(item.ColumnName, item.ColumnValue));
+                searchedDevice.Append(test.FindAllData(item.ColumnName, item.ColumnValue));
                 //string sql = $"select * from  { columnInfo[0]}.{columnInfo[1]} where {columnInfo[2]} = {item.ColumnValue} ";
 
 
@@ -75,7 +79,6 @@ namespace FindIpInfo
             {
                 buttonAddRecord.Enabled = true;
             }
-            IPSearch test = new IPSearch();
             GarthDeviceInfo2 data = new GarthDeviceInfo2();
             data.company = textBoxCompanyName.Text;
             data.device = textBoxDevice.Text;
@@ -112,7 +115,6 @@ namespace FindIpInfo
 
         private void buttonFindCompany_Click(object sender, EventArgs e)
         {
-            IPSearch test = new IPSearch();
             if (test.FindCompanyName(textBoxCompanyName.Text) == true)
             {
                 labelExisting.Text = "Existing";
@@ -153,10 +155,9 @@ namespace FindIpInfo
 
         private void buttonFindDevice_Click(object sender, EventArgs e)
         {
-            IPSearch tt = new IPSearch();
             //string pattern = ("["+textBoxFindCompany.Text+"]");
             //Regex rg = new Regex(pattern);
-            var list = tt.FindMyDevice(textBoxFindCompany.Text);
+            var list = test.FindMyDevice(textBoxFindCompany.Text);
             if (list.Count() == 0)
             {
                 labelSearchState.Text = "Not Found!";
@@ -188,7 +189,7 @@ namespace FindIpInfo
             foreach (var item in deviceInfo)
             {
                 //store1 = string.Concat("company: ", item.company)+"\n"+string.Concat("moudle: ", item.moudle);
-                numbers.Append(item.company+" ,"+item.moudle+"\n");
+                numbers.Append(item.company+" ,"+item.module+"\n");
 
 
             }
@@ -225,7 +226,6 @@ namespace FindIpInfo
             {
                 buttonAddRecord.Enabled = true;
             }
-            IPSearch test = new IPSearch();
             GarthCompany data = new GarthCompany();
             data.company = textBoxCompany.Text;
             
@@ -243,22 +243,79 @@ namespace FindIpInfo
             {
                 buttonAddRecord.Enabled = true;
             }
-            IPSearch test = new IPSearch();
             GarthDevice data = new GarthDevice();
-            data.company_ID=comboBoxCompanyName.Text;
-            data.moudle = textBoxDeviceModule.Text;
+            data.company_ID= test.getCompany_ID(comboBoxCompanyName.Text);
+            //need to fix
+            data.module = textBoxDeviceModule.Text;
             data.ipAddress = textBoxDeviceIpAddress.Text;
             data.serialNumber = textBoxDeviceSerialNumber.Text;
             data.username = textBoxDeviceUsername.Text;
             data.password = textBoxDevicePassword.Text;
             data.positionOfDevice = textBoxDevicePositionOfDevice.Text;
+            
          
             test.AddDevice(data);
+            labelDeviceStatus.Text = "saved";
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxCompanyName.DataSource = comboBoxCompanyName.Items;
+            //comboBoxCompanyName.DataSource = test.ComboBoxCompany();
+        }
+
+        private void comboBoxCompanyName_MouseClick(object sender, MouseEventArgs e)
+        {
+            //comboBoxCompanyName.DataSource = test.ComboBoxCompany();
+        }
+
+        private void tabPageAddDeviceInfo_MouseClick(object sender, MouseEventArgs e)
+        {
+            comboBoxCompanyName.DataSource = test.ComboBoxCompany();
+        }
+
+        private void textBoxDeviceIpAddress_TextChanged(object sender, EventArgs e)
+        {
+            labelDeviceStatus.Text = "";
+        }
+
+        private void buttonAddLog_Click(object sender, EventArgs e)
+        {
+            if (textBoxDeviceModule.Text == "")
+            {
+                buttonAddRecord.Enabled = false;
+            }
+            else
+            {
+                buttonAddRecord.Enabled = true;
+            }
+            GarthLog data = new GarthLog();
+
+            data.device_ID = test.getDevice_ID(comboBoxDevice.Text);
+            //need to fix
+            data.logDate = DateTime.Now;
+            data.DeviceLog = textBoxDeviceLog.Text;
+            data.DeviceConfig = textBoxDeviceConfig.Text;
+           
+
+            test.AddLog(data);
+            labelAddLogStatus.Text = "saved";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBoxDevicePassword.UseSystemPasswordChar==true)
+            {
+                textBoxDevicePassword.UseSystemPasswordChar=false;
+            }
+            else
+            {
+                textBoxDevicePassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void comboBoxChooseCompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxDevice.DataSource = test.ComboBoxDevice(comboBoxChooseCompany.Text);
         }
     }
 }

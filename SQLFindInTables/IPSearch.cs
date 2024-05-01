@@ -1,16 +1,18 @@
 ﻿using Microsoft.SqlServer.Server;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace SQLFindInTables
 {
     public class IPSearch
     {
-        WideWorldImportersEntities MyModel = new WideWorldImportersEntities();
+        WideWorldImportersEntities4 MyModel = new WideWorldImportersEntities4();
         
         public List<FindMyDevice_Result> FindMyDevice(string searchCompany)
         {
@@ -79,11 +81,97 @@ namespace SQLFindInTables
             //int StateStored=MyModel.SaveChanges();
             //return StateStored;
         }
-        //combobox companyname data source
-        public string ComboBoxCompany(string )
+        public void AddLog(GarthLog data)
         {
-            
+
+            MyModel.GarthLogs.Add(data);
+
+            MyModel.SaveChanges();
+            //MyModel.SaveChangesAsync().;    
+            //int StateStored=MyModel.SaveChanges();
+            //return StateStored;
         }
+        //combobox companyname data source
+        Dictionary<string, int> deviceDictionary = new Dictionary<string, int>();
+        public int getDevice_ID(string deviceName)
+        {
+            int ID = -1;
+            if (!deviceDictionary.TryGetValue(deviceName, out ID))
+            {
+                ID = -1;
+            }
+            return ID;
+        }
+        public List<string> ComboBoxDevice(string chooseCompany)
+        {
+            deviceDictionary.Clear();
+            var company_ID = getCompany_ID(chooseCompany);
+            List<string> deviceList = new List<string>();
+            var list = from s in MyModel.GarthDevices
+                       where s.company_ID == company_ID
+                       select new { s.ID,s.ipAddress,s.module };
+                       
+            /* var studentNames = studentList.Where(s => s.Age > 18)
+                               .Select(s => s)
+                               .Where(st => st.StandardID > 0)
+                               .Select(s => s.StudentName);
+            */
+            //string sql = $"select company  from  [dbo].[GarthCompany]  ";
+            //var list = MyModel.GarthCompanies.SqlQuery(sql);
+            foreach (var item in list)
+            {
+                deviceList.Add($"{item.module}:{item.ipAddress}");
+                deviceDictionary.Add($"{ item.module}:{item.ipAddress}", item.ID);
+            }
+            return deviceList;
+        }
+        Dictionary<string, int> companyDictionary = new Dictionary<string, int>();
+        public int getCompany_ID(string companyName)
+        {
+            int ID = -1;
+            if (!companyDictionary.TryGetValue(companyName, out ID))
+            {
+                ID = -1;
+            }
+            return ID;
+        }
+        public List<string> ComboBoxCompany()
+        {
+            companyDictionary.Clear();
+            List<string> companyList = new List<string>();
+            var list = from s in MyModel.GarthCompanies
+                       select new { s.ID, s.company};
+           /* var studentNames = studentList.Where(s => s.Age > 18)
+                              .Select(s => s)
+                              .Where(st => st.StandardID > 0)
+                              .Select(s => s.StudentName);
+           */
+            //string sql = $"select company  from  [dbo].[GarthCompany]  ";
+            //var list = MyModel.GarthCompanies.SqlQuery(sql);
+            foreach (var item in list)
+            {
+                companyList.Add(item.company);
+                companyDictionary.Add(item.company,item.ID);
+            }
+            return companyList;
+        }
+       /* public int convertCompanyToCompany_ID()
+        {
+            var list = from s in MyModel.GarthCompanies
+                       select s.ID,;
+             var studentNames = studentList.Where(s => s.Age > 18)
+                               .Select(s => s)
+                               .Where(st => st.StandardID > 0)
+                               .Select(s => s.StudentName);
+            
+            //string sql = $"select company  from  [dbo].[GarthCompany]  ";
+            //var list = MyModel.GarthCompanies.SqlQuery(sql);
+            foreach (var item in list)
+            {
+                companyList.Add(item);
+            }
+            return companyList;
+        }*/
         public void AddOrUpdataData(GarthDeviceInfo2 data)
         {
             if (FindCompanyName(data.company))
